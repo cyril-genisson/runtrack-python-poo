@@ -56,13 +56,13 @@ if __name__ == "__main__":
     ville75 = Ville("Paris", 1000000)
     ville13 = Ville("Marseille", 861635)
 
-    print(f"ville: {ville75.get_name()}\t\t nb d'habitants: {ville75.get_nbresidents()}")
-    print(f"ville: {ville13.get_name()}\t nb d'habitants: {ville13.get_nbresidents()}")
+    print(f"Population de la ville de {ville75.get_name()}: {ville75.get_nbresidents()} habitants")
+    print(f"Population de la ville de {ville13.get_name()}: {ville13.get_nbresidents()} habitants")
 
     pers1 = Personne("John", 45, ville75)
     pers2 = Personne("Myrtille", 4, ville75)
     pers3 = Personne("Chloé", 18, ville13)
     
-    print(f"ville: {ville75.get_name()}\t\t nb d'habitants: {ville75.get_nbresidents()}")
-    print(f"ville: {ville13.get_name()}\t nb d'habitants: {ville13.get_nbresidents()}")
+    print(f"Mise à jour de la population de la ville de {ville75.get_name()}: {ville75.get_nbresidents()} habitants")
+    print(f"Mise à jour de la population de la ville de {ville13.get_name()}: {ville13.get_nbresidents()} habitants")
 
