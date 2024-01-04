@@ -1,0 +1,14 @@
+id,article,price_HT,tva(%)
+1,Sushi,3.99,10.
+2,Burrito,9.99,10.
+3,Taco,2.99,10.
+4,Quesadilla,4.25,10.
+5,Pizza,2.49,10.
+6,Pasta,13.99,10.
+7,Steak,24.99,10.
+8,Salad,11.25,10.
+9,Donut,0.99,10.
+10,Soda,1.75,10.
+11,Beer,3.5,20.
+12,Wine,8.5,20.
+13,Water,2.5,5.5
