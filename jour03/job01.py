@@ -46,10 +46,10 @@ class Personne:
         return self.__age
 
     def get_town(self):
-        return self.__town._Ville__name
+        return self.__town.get_name()
 
     def ajouterPopulation(self):
-        self.__town._Ville__nb_residents += 1
+        self.__town.add_residents()
 
 
 if __name__ == "__main__":

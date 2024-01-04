@@ -19,13 +19,19 @@ class CompteBancaire:
         self.__overdraft = overdraft
         self.__agios_rate = 0.05
 
+    def get_id(self):
+        return self.__id_account
+
+    def get_balance(self):
+        return self.__balance
+
     def afficher(self):
         print(f"Numéro de compte: {self.__id_account}")
         print(f"Titulaire: {self.__surname} {self.__name}")
         self.afficherSolde()
 
     def afficherSolde(self):
-        print(f"Solde du compte: {self.__balance} €")
+        print(f"Solde du compte n°{self.get_id()}: {self.__balance} €")
 
     def versement(self, payment):
         self.__balance += payment
@@ -37,7 +43,7 @@ class CompteBancaire:
                 self.afficherSolde()
                 return True
             else:
-                print("Pas assez d'argent sur le compte pour ce montant.")
+                print(f"Solde insuffisant pour un retrait de {withdrawal}€ sur le compte n°{self.get_id()}")
                 self.afficherSolde()
                 return False
 
@@ -47,7 +53,7 @@ class CompteBancaire:
 
     def virement(self, account, transfert_amount):
         if self.retrait(transfert_amount):
-            account._CompteBancaire__balance += transfert_amount
+            account.versement(transfert_amount)
 
 
 if __name__ == "__main__":
@@ -63,6 +69,6 @@ if __name__ == "__main__":
 
     compte1.afficher()
     compte2.afficher()
-    compte1.virement(compte2, 3000)
+    compte1.virement(compte2, abs(compte2.get_balance()))
     compte1.afficher()
     compte2.afficher()
