@@ -42,7 +42,7 @@ class Professeur(Personne):
         self.__matiereEnseignee = subject
 
     def enseigner(self):
-        print("Le cours va commencer")
+        print(f"Le cours \"{self.__matiereEnseignee}\" va commencer")
 
 
 if __name__ == "__main__":
