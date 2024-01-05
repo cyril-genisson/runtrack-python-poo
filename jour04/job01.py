@@ -16,10 +16,10 @@ class Personne:
         self._age = age
 
     def afficherAge(self):
-        print(f"Age: {self._age}")
+        print(f"Age: {self._age} ans")
 
     def modifierAge(self, age):
-        self.__age = age
+        self._age = age
 
     def bonjour(self):
         print("Hello")
